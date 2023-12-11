@@ -1,4 +1,4 @@
-const carouselData = [
+const CarouselData = [
     {
       id: 1,
       src: "https://ik.imagekit.io/m1akscp5q/11.png?updatedAt=1702111096135",
@@ -123,5 +123,5 @@ const carouselData = [
     // ... other objects
   ];
   
-  export default carouselData;
+  export default CarouselData;
   

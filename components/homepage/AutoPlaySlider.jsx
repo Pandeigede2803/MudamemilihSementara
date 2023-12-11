@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import ImageCarousel from "./ImageCarousel"; // Import your ImageCarousel component
-import carouselData from "./carouselData"; // Import your data array
+import carouselData from "./CarouselData"; // Import your data array
 
 export default class AutoPlay extends Component {
   render() {
