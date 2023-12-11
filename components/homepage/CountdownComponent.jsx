@@ -19,21 +19,21 @@ const CountdownComponent = (props) => {
       // Render a countdown
       return (
         <div
-          className={`flex justify-centre space-x-[36px]  py-4 px-2 md:px-6 rounded font-sans w-fit ${props.style} `}
+          className={` justify-centre space-x-[36px]  py-4 px-2 md:px-6 rounded font-sans w-fit ${props.style} `}
         >
-          <div className="text-4xl text-center text-amber-600 font-medium ">
+          <div className="text-4xl text-center text-amber-600 font-bold ">
             {days}
             <div className=" text-black text-lg font-thin">days</div>
           </div>
-          <div className="text-4xl text-center text-amber-600 font-medium">
+          <div className="text-4xl text-center text-amber-600 font-bold">
             {hours}
             <div className="text-black  text-lg font-thin font-medium">hours</div>
           </div>
-          <div className="text-4xl text-center text-amber-600 font-medium">
+          <div className="text-4xl text-center text-amber-600 font-bold">
             {minutes}
             <div className="text-black  text-lg font-thin"> minutes </div>
           </div>
-          <div className="text-4xl text-center text-amber-600 font-medium ">
+          <div className="text-4xl text-center text-amber-600 font-bold ">
             {seconds}
             <div className="text-black  text-lg font-thin"> seconds </div>
           </div>

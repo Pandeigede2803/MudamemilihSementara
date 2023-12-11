@@ -4,7 +4,7 @@ import TestimonialCarousel from "./TestimoniCarousel"
 
 const ContactUs = () => {
   return (
-    <div className='flex flex-col justify-center text-center font-sans bg-accent2 py-20 lg:mx-36 mx-4 rounded-xl rounded-tl-[52px]  '>
+    <div className='flex flex-col justify-center text-center font-sans bg-accent2 pt-20 pb-16 lg:mx-36 mx-4 rounded-xl rounded-tl-[52px]  '>
         <div>
         <h1 className='mb-4 font-medium text-4xl '>Ingin Profil Kamu Lebih dikenal?</h1>
         <p className='mb-4'>Daftarkan profilmu ke mudamemilih.com </p>

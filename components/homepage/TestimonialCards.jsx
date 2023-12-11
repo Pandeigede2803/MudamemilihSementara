@@ -1,5 +1,6 @@
 "use clinet"
 
+
 import React from 'react';
 
 const StarRating = ({ count }) => {
@@ -12,10 +13,10 @@ const StarRating = ({ count }) => {
   );
 };
 
-const TestimonialCards = ({ data }) => {
-  console.log (data); // Accept data as a prop
+const TestimonialCards = ({ data, className }) => {
+  console.log(data); // Accept data as a prop
   return (
-    <div className="max-w-sm mx-auto bg-white rounded-lg border border-gray-200 shadow-md p-6">
+    <div className={`max-w-sm mx-auto bg-white rounded-lg border border-gray-200 shadow-md p-6 ${className}`}>
       <StarRating count={data.stars} />
       <p className="text-gray-600 mt-4">{data.comment}</p>
       <div className="flex items-center mt-6">

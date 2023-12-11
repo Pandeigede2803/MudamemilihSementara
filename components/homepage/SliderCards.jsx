@@ -11,17 +11,42 @@ export default class SliderCards extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToShow: 5,
+      slidesToScroll: 2,
       autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: "linear"
+      speed: 1000,
+      autoplaySpeed: 4000,
+      cssEase: "",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     };
 
     // Render the AutoPlaySlider component
     return (
-      <div>
+      <div className=" mb-12">
         <div className='my-4 font-sans flex flex-col justify-center text-center'>
         <h1 className=' text-primary text-3xl'>Cek Partai Pilihanmu Disini!</h1>
         <h5 className=' text-abu'>Bijaklah dalam memilih</h5>

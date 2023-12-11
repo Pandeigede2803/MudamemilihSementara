@@ -17,7 +17,7 @@ export default class TestimonialCarousel extends Component {
       initialSlide: 0,
     };
     return (
-        <div className="lg:hidden">
+        <div className="lg:hidden mx-2 mt-4">
         <Slider {...settings}>
           {TestimonialData.map((item) => (
             <div key={item.id}>

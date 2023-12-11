@@ -1,51 +1,31 @@
 import React from "react";
+import SellingPoint from "./SellingPoint";
 
 const SiapaKita = () => {
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-white my-4 lg:mx-20 mx-10 py-16">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-semibold mb-6">About Us</h2>
-          <p className="text-gray-700 text-center max-w-2xl mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
-            ex eu ante commodo ultrices. Fusce commodo consequat dolor, vel
-            sagittis urna tristique id.
-          </p>
+        <div className="flex flex-col lg:flex-row items-center mx-auto">
+          {/* left content */}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <img
-                src="https://placekitten.com/200/200" // Replace with team member image URL
-                alt="Team Member 1"
-                className="rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">John Doe</h3>
-              <p className="text-gray-600">Co-Founder</p>
-            </div>
-
-            {/* Team Member 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <img
-                src="https://placekitten.com/201/201" // Replace with team member image URL
-                alt="Team Member 2"
-                className="rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">Jane Smith</h3>
-              <p className="text-gray-600">Lead Developer</p>
-            </div>
-
-            {/* Team Member 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <img
-                src="https://placekitten.com/202/202" // Replace with team member image URL
-                alt="Team Member 3"
-                className="rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">Bob Johnson</h3>
-              <p className="text-gray-600">Marketing Specialist</p>
-            </div>
+          <div className=" ml-4 mr-10">
+            <h2 className="lg:text-3xl text-2xl font-semibold mb-6 font-sans">
+              Apasih bedanya{" "}
+              <span className="text-primary mr-2">mudahmemilih</span>
+              dibanding yang lain?
+            </h2>
+            <p className="text-gray-700 text-left max-w-2xl mb-8 font-sans">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              eget ex eu ante commodo ultrices. Fusce commodo consequat dolor,
+              vel sagittis urna tristique id.
+            </p>
           </div>
+
+          {/* right content */}
+          <div className="  flex flex-row justify-center">
+          <SellingPoint />
+          </div>
+          {/* selling point komponent */}
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 const CarouselPartydata = [
     {
       id: 1,
-      src: "https://ik.imagekit.io/m1akscp5q/logo-partai-demokrat-_140128142725-938.jpeg?updatedAt=1701935184016",
+      src: "https://ik.imagekit.io/m1akscp5q/3.png?updatedAt=1702287544383",
       href: "#link1",
       alt: "Nature Image 1",
       title: "Card Title 1",
@@ -10,7 +10,7 @@ const CarouselPartydata = [
     },
     {
       id: 2,
-      src: "https://ik.imagekit.io/m1akscp5q/gerindra.png?updatedAt=1701935184027",
+      src: "https://ik.imagekit.io/m1akscp5q/4.png?updatedAt=1702287544358",
       href: "#link2",
       alt: "Nature Image 2",
       title: "Card Title 2",
@@ -19,7 +19,7 @@ const CarouselPartydata = [
     },
     {
       id: 3,
-      src: "https://ik.imagekit.io/m1akscp5q/0ed3f774-4eb9-4275-b7f2-9b514f9676e9_43.jpeg?updatedAt=1701884735951",
+      src: "https://ik.imagekit.io/m1akscp5q/gerindra.png?updatedAt=1701935184027",
       href: "#link3",
       alt: "Nature Image 3",
       title: "Card Title 3",
@@ -28,7 +28,7 @@ const CarouselPartydata = [
     },
     {
       id: 4,
-      src: "https://ik.imagekit.io/m1akscp5q/logo-partai-demokrat-_140128142725-938.jpeg?updatedAt=1701935184016",
+      src: "https://ik.imagekit.io/m1akscp5q/2.png?updatedAt=1702287544538",
       href: "#link4",
       alt: "Nature Image 4",
       title: "Card Title 4",
@@ -37,7 +37,25 @@ const CarouselPartydata = [
     },
     {
       id: 5,
-      src: "https://ik.imagekit.io/m1akscp5q/logo-partai-demokrat-_140128142725-938.jpeg?updatedAt=1701935184016",
+      src: "https://ik.imagekit.io/m1akscp5q/1.png?updatedAt=1702287544617",
+      href: "#link5",
+      alt: "Nature Image 5",
+      title: "Card Title 5",
+      content: "Some quick example text for card 5.",
+      buttonText: "Button 5",
+    },
+    {
+      id: 6,
+      src: "https://ik.imagekit.io/m1akscp5q/5.png?updatedAt=1702287544615",
+      href: "#link5",
+      alt: "Nature Image 5",
+      title: "Card Title 5",
+      content: "Some quick example text for card 5.",
+      buttonText: "Button 5",
+    },
+    {
+      id: 7,
+      src: "https://ik.imagekit.io/m1akscp5q/1.png?updatedAt=1702287544617",
       href: "#link5",
       alt: "Nature Image 5",
       title: "Card Title 5",
