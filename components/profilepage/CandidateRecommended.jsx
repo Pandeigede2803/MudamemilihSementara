@@ -4,7 +4,7 @@ import React from "react";
 function CandidateRecommended() {
   return (
     <div className="my-14">
-      <h1 className="text-2xl font-bold text-center mb-10">Recommended Candidate</h1>
+      <h1 className="text-2xl font-bold text-center mb-10 font-sans ">Recommended Candidate</h1>
       <div className="lg:flex items-center justify-center ">
         <div className="mx-auto px-5">
           <div className="max-w-xs cursor-pointer rounded-lg bg-white p-2 shadow duration-150 hover:scale-105 hover:shadow-md">
