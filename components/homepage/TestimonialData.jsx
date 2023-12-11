@@ -2,7 +2,7 @@ const TestimonialData = [
   {
     id: 1, 
     stars: 5,
-    comment: "This product changed my life! The quality is amazing and the service was excellent.",
+    comment: "This product changed my life! ",
     person: {
       name: "Jane Doe",
       job: "Graphic Designer",
@@ -12,7 +12,7 @@ const TestimonialData = [
   {
     id: 2, // Unique identifier
     stars: 5,
-    comment: "This product changed my life! The quality is amazing and the service was excellent.",
+    comment: "This product changed my life! ",
     person: {
       name: "Jane Doe",
       job: "Graphic Designer",
@@ -22,7 +22,7 @@ const TestimonialData = [
   {
     id: 3, // Unique identifier
     stars: 5,
-    comment: "This product changed my life! The quality is amazing and the service was excellent.",
+    comment: "This product changed my life! .",
     person: {
       name: "Jane Doe",
       job: "Graphic Designer",
@@ -32,7 +32,7 @@ const TestimonialData = [
   {
     id: 4, // Unique identifier
     stars: 5,
-    comment: "This product changed my life! The quality is amazing and the service was excellent.",
+    comment: "This product changed my life! ",
     person: {
       name: "Jane Doe",
       job: "Graphic Designer",
