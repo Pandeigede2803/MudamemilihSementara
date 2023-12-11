@@ -23,7 +23,7 @@ export default class TestimonialCarousel extends Component {
             <div key={item.id}>
               <TestimonialCardCarousel data={item} />
             </div>
-          ))}
+          ))};;
         </Slider>
       </div>
     );
