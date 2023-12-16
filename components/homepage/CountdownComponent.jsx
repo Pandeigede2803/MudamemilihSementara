@@ -19,8 +19,7 @@ const CountdownComponent = (props) => {
       // Render a countdown
       return (
         <div
-          className={` justify-centre space-x-[36px]  py-4 px-2 md:px-6 rounded font-sans w-fit ${props.style} `}
-        >
+          className={` justify-centre space-x-[36px]  py-4 px-2 md:px-6 rounded font-sans w-fit ${props.style} `}>
           <div className="text-4xl text-center text-amber-600 font-bold ">
             {days}
             <div className=" text-black text-lg font-thin">days</div>

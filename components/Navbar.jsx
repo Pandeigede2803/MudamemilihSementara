@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="bg-white  fixed w-full z-20 top-0 start-0  dark:border-gray-600 font-sans">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
-          href="https://flowbite.com/"
+          href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
@@ -64,7 +64,7 @@ const Navbar = () => {
              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-primary md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
               <a
-                href="#"
+                href="/"
                 className="block py-2 px-3 md:text-primary  bg-white text-primary  rounded md:bg-transparent  -700 md:p-0 "
                 aria-current="page"
               >
@@ -73,7 +73,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/aboutpage"
                 className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 "
               >
                 About
@@ -81,15 +81,15 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/searchPage"
                 className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 "
               >
-                Services
+                Search
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="/contact"
                 className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 "
               >
                 Contact

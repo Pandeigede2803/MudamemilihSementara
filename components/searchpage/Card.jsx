@@ -5,7 +5,7 @@ import React from "react";
 
 function Card(props) {
 
-  const {image, link, urut, detail, name, style} = props
+  const {image, link, urut, detail, name, style,partai} = props
 
   return (
         <div className={`rounded overflow-hidden shadow-lg ${style}`}>
@@ -22,7 +22,7 @@ function Card(props) {
             </Link>
             <Link href={link}>
               <div className="absolute bottom-0 left-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                Photos
+                {partai}
               </div>
             </Link>
 
