@@ -41,7 +41,7 @@ const CountdownComponent = (props) => {
     }
   };
 
-  return <Countdown date={targetDate} renderer={renderer} />;
+  return <Countdown date={targetDate} renderer={renderer} />;;
 };
 
 export default CountdownComponent;
