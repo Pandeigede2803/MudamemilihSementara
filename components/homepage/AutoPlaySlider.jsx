@@ -36,8 +36,8 @@ export default class AutoPlay extends Component {
     };
 
     return (
-      <div>
-        <div className=" my-4">
+      <div className="mx-0 ">
+        <div className="my-4">
         <h2 className=" flex text-center flex-col font-sans text-[36px] ">Tentukan Kandidat Pilihanmu</h2>
         <p className="text-center text-abu mx-2 font-sans text-[16px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui.</p></div>
         <Slider {...settings}>

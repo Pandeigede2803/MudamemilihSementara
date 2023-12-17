@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import { FaLocationDot } from "react-icons/fa6";
 import useDapilStore from "@/components/ZustandStore/useDapilStore";
 
 const MapBackground = () => {
@@ -20,40 +21,52 @@ const MapBackground = () => {
         alt="image"
       />
 
-      <div>
-        <h1>Select a Province</h1>
-        <Link
-          href={{
-            pathname: "/searchPage/filter",
-            query: {
-              provinsi: "Bali",
-            },
-          }}
-        >
-          <h1>PILIH BALI</h1>
-        </Link>
-
-        <Link
-          href={{
-            pathname: "/searchPage/filter",
-            query: {
-              provinsi: "Jawa Timur",
-            },
-          }}
-        >
-          <h1>PILIH JAWA TIMUR</h1>
-        </Link>
-
-        <Link
-          href={{
-            pathname: "/searchPage/filter",
-            query: {
-              provinsi: "Jawa Barat",
-            },
-          }}
-        >
-          <h1>PILIh JAWA BARAT</h1>
-        </Link>
+      <div className=" flex flex-row space-x-5 ">
+        <div className="">
+          <Link
+            href={{
+              pathname: "/searchPage/filter",
+              query: {
+                provinsi: "Bali",
+              },
+            }}
+          > <div className="flex flex-col justify-center text-center mx-auto bg-slate-400 items-center">
+            <FaLocationDot className=" text-secondary hover:text-xl hover:text-white" />
+            <h1 className=" text-[8px]">BALI</h1>
+            </div>
+          </Link>
+        </div>
+        <div>
+          <Link
+            href={{
+              pathname: "/searchPage/filter",
+              query: {
+                provinsi: "Jawa Timur",
+              },
+            }}
+          >
+            <div className="flex flex-col justify-center text-center mx-auto bg-slate-400 items-center">
+            <FaLocationDot className="text-secondary hover:text-xl hover:text-white " />
+            <h1 className="text-[8px]">JAWA TIMUR</h1>
+            </div>
+          </Link>
+        </div>
+        <div>
+          <Link
+            href={{
+              pathname: "/searchPage/filter",
+              query: {
+                provinsi: "Jawa Barat",
+              },
+            }}
+          > <div className="flex flex-col justify-center text-center mx-auto bg-slate-400 items-center">
+            <FaLocationDot className=" text-secondary " />
+            <h1 className="text-[8px]">JAWA BARAT</h1>
+            </div>
+            
+          </Link>
+        </div>
+        
       </div>
     </div>
   );

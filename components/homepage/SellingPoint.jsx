@@ -2,7 +2,7 @@ import React from "react";
 
 const SellingPoint = () => {
   return (
-    <div className="font-sans relative lg:w-4/6  ">
+    <div className="font-sans relative lg:w-4/6 ">
       <img src="https://ik.imagekit.io/m1akscp5q/Group%201351.png?updatedAt=1702271106212" className=""></img>
 
       <div className="">

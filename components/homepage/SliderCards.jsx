@@ -46,7 +46,7 @@ export default class SliderCards extends Component {
 
     // Render the AutoPlaySlider component
     return (
-      <div className=" mb-12">
+      <div className="mb-12">
         <div className='my-4 font-sans flex flex-col justify-center text-center'>
         <h1 className=' text-primary text-3xl'>Cek Partai Pilihanmu Disini!</h1>
         <h5 className=' text-abu'>Bijaklah dalam memilih</h5>

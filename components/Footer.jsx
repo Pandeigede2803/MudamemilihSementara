@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="border-t text-sans bg-primary text-white">
+    <footer className="text-sans bg-primary text-white bg-black w-full ">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="lg:flex-row md:justify-between flex flex-col items-center">
           <div className="mb-6 md:mb-0 lg:w-[30%] flex flex-col items-center lg:items-start">
