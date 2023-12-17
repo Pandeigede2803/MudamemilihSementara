@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 import SearchInput from "@/components/homepage/SearchInput";
@@ -10,27 +10,31 @@ import useDapilStore from "@/components/ZustandStore/useDapilStore";
 const FilterComponent = () => {
   const {
     dapils,
+    selectedProvinsi,
+    setSelectedProvinsi,
+    getProvinces,
+    getKabupatenList,
     selectedKabupaten,
     selectedKecamatan,
     fetchDapils,
     setSelectedKabupaten,
-    setSelectedKecamatan
+    setSelectedKecamatan,
   } = useDapilStore();
 
   useEffect(() => {
     fetchDapils();
   }, [fetchDapils]);
 
-  const kabupatenButtons = dapils
-    .flatMap((dapil) => dapil.kabupaten)
-    .map((kab) => (
-      <FilterButton
-        key={kab.nama}
-        name={kab.nama}
-        onClick={() => setSelectedKabupaten(kab.nama)}
-      />
-    ));
 
+
+  const kabupatenList = getKabupatenList();
+  const kabupatenButtons = kabupatenList.map((kab) => (
+    <FilterButton
+      key={kab.nama}
+      name={kab.nama}
+      onClick={() => setSelectedKabupaten(kab.nama)}
+    />
+  ));
   const kecamatanList = selectedKabupaten
     ? dapils
         .flatMap((dapil) => dapil.kabupaten)
@@ -45,6 +49,14 @@ const FilterComponent = () => {
     />
   ));
 
+  const provinsiButtons = getProvinces().map((provinsi) => (
+    <FilterButton
+      key={provinsi}
+      name={provinsi}
+      onClick={() => setSelectedProvinsi(provinsi)}
+    />
+  ));
+
   const kelurahanList = selectedKecamatan
     ? kecamatanList.find((kec) => kec.nama === selectedKecamatan)?.kelurahan ||
       []
@@ -53,11 +65,22 @@ const FilterComponent = () => {
   const kelurahanButtons = kelurahanList.map((kel) => (
     <FilterButton key={kel.nama} name={kel.nama} />
   ));
+
+
   return (
     <div className="my-32">
       <Link href={"/searchPage"}>
-        <FaArrowLeft /> BACK
+        F
+        <span className="text-xl font-bold">
+          <FaArrowLeft /> BACK TO
+        </span>
       </Link>
+
+      {/* i want to use this button in other jsx  */}
+      <h1>{provinsiButtons}</h1>
+      {/* i want to use this button in other jsx  */}
+      <h1>Provinsi : {selectedProvinsi}</h1>
+
       <SearchInput />
       <div className="my-4">
         {/* Section for displaying kabupaten buttons */}

@@ -1,56 +1,49 @@
-import React from "react";
+"use client ";
+
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import useDapilStore from "@/components/ZustandStore/useDapilStore";
 
 const MapBackground = () => {
+  const { setSelectedProvinsi, fetchDapils } = useDapilStore();
+  const router = useRouter();
+
+  useEffect(() => {
+    fetchDapils(); // Fetch dapils on page load
+  }, [fetchDapils]);
+
+  const handleSelectProvinsi = (provinsi) => {
+    setSelectedProvinsi(provinsi);
+    router.push("/searchPage/filter"); // Navigate to Page 2
+  };
+
   return (
-    <div className=" bg-slate-600">
-      <div className="relative w-full bg-primary">
-        <Image
-          src={
-            "https://ik.imagekit.io/m1akscp5q/Group%201354.png?updatedAt=1702705424183"
-          }
-          width={1304}
-          height={637}
-          className=" flex flex-col justify-center mx-auto "
-          alt="image"
-        />
+    <div>
+      <Image
+        src={
+          "https://ik.imagekit.io/m1akscp5q/Group%201354.png?updatedAt=1702705424183"
+        }
+        width={1304}
+        height={637}
+        className=" flex flex-col justify-center mx-auto "
+        alt="image"
+      />
 
-        <div className=" w-[200px] h-[60px] absolute bottom-[20px] left-[110px] flex ">
-          
-          
-          {/* create the button to direct link to searchPage/filter */}
-          <Link href={"searchPage/filter"}>
-            <button>
-              Jawa timur
-            <HiOutlineLocationMarker className="w-auto  text-secondary text-sm font-extrabold  p-0 " />
-            </button>
-          </Link>
-          <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-auto   text-secondary  text-sm font-extrabold rounded-full p-0 " />
-          </Link>
-          <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-auto   text-secondary text-sm font-extrabold rounded-full p-0 " />
-          </Link>
-          <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-auto   text-secondary text-sm font-extrabold rounded-full p-0 " />
-          </Link>
-          <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-auto   text-secondary text-sm font-extrabold rounded-full p-0 " />
-            Jawa timur
-          </Link>
-          <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-auto  text-secondary text-sm font-extrabold  p-0 " />
-            Bali
-          </Link>
-
-    
-         
-        </div>
+      <div>
+        <h1>Select a Province</h1>
+        <button onClick={() => handleSelectProvinsi("Bali")}>Bali</button>
+        <button onClick={() => handleSelectProvinsi("Jawa Barat")}>
+          Jawa Barat
+        </button>
+        <button onClick={() => handleSelectProvinsi("Jawa Timur")}>
+          Jawa Timur
+        </button>
       </div>
     </div>
   );
 };
 
-export default MapBackground;;;;
+export default MapBackground;

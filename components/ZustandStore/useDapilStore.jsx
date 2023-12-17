@@ -1,9 +1,9 @@
-"use client"
 
-import {create} from 'zustand';
+import { create } from 'zustand';
 
 const useDapilStore = create((set) => ({
   dapils: [],
+  selectedProvinsi: null,
   selectedKabupaten: null,
   selectedKecamatan: null,
   fetchDapils: async () => {
@@ -18,11 +18,25 @@ const useDapilStore = create((set) => ({
       console.error("Fetching error:", error);
     }
   },
+  getProvinces: () => {
+    return useDapilStore.getState().dapils.map((provinsiData) => provinsiData.provinsi);
+  },
+  setSelectedProvinsi: (provinsi) => {
+    set({ selectedProvinsi: provinsi, selectedKabupaten: null, selectedKecamatan: null });
+  },
   setSelectedKabupaten: (nama) => {
     set({ selectedKabupaten: nama, selectedKecamatan: null });
   },
   setSelectedKecamatan: (nama) => {
     set({ selectedKecamatan: nama });
+  },
+  getKabupatenList: () => {
+    const selectedProvinsi = useDapilStore.getState().selectedProvinsi;
+    const dapils = useDapilStore.getState().dapils;
+    const kabupatenList = dapils
+      .find((provinsiData) => provinsiData.provinsi === selectedProvinsi)
+      ?.kabupaten || [];
+    return kabupatenList;
   },
 }));
 
