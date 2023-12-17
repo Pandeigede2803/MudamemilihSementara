@@ -27,6 +27,10 @@ const FilterComponent = ({provinsiname}) => {
     initializeData(); // Initialize data on component mount
   }, [provinsiname, setSelectedProvinsi, initializeData]);
 
+  const handleSearch = (searchValue) => {
+    setSelectedProvinsi(searchValue);
+  };
+
   const kabupatenList = getKabupatenList();
   const kabupatenButtons = kabupatenList.map((kab) => (
     <FilterButton
@@ -76,7 +80,7 @@ const FilterComponent = ({provinsiname}) => {
       </Link>
       <h1>Provinsi : {provinsiname}</h1>
 
-      <SearchInput />
+      <SearchInput onSearch={handleSearch}  />
       <div className="my-4">
         <div>
           <h1 className="text-center">PILIH KABUPATENMU</h1>
