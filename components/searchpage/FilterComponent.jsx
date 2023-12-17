@@ -1,3 +1,4 @@
+// FilterComponent.jsx
 "use client"
 
 import React, { useEffect } from "react";
@@ -7,25 +8,24 @@ import SearchInput from "@/components/homepage/SearchInput";
 import FilterButton from "@/components/searchpage/FilterButton";
 import useDapilStore from "@/components/ZustandStore/useDapilStore";
 
-const FilterComponent = () => {
+const FilterComponent = ({provinsiname}) => {
   const {
     dapils,
     selectedProvinsi,
     setSelectedProvinsi,
-    getProvinces,
-    getKabupatenList,
-    selectedKabupaten,
-    selectedKecamatan,
-    fetchDapils,
     setSelectedKabupaten,
     setSelectedKecamatan,
+    selectedKabupaten,
+    selectedKecamatan,
+    initializeData, // Use the initializeData function
+    getProvinces,
+    getKabupatenList,
   } = useDapilStore();
 
   useEffect(() => {
-    fetchDapils();
-  }, [fetchDapils]);
-
-
+    setSelectedProvinsi(provinsiname); // Set selectedProvinsi from props
+    initializeData(); // Initialize data on component mount
+  }, [provinsiname, setSelectedProvinsi, initializeData]);
 
   const kabupatenList = getKabupatenList();
   const kabupatenButtons = kabupatenList.map((kab) => (
@@ -35,6 +35,7 @@ const FilterComponent = () => {
       onClick={() => setSelectedKabupaten(kab.nama)}
     />
   ));
+
   const kecamatanList = selectedKabupaten
     ? dapils
         .flatMap((dapil) => dapil.kabupaten)
@@ -66,24 +67,17 @@ const FilterComponent = () => {
     <FilterButton key={kel.nama} name={kel.nama} />
   ));
 
-
   return (
     <div className="my-32">
       <Link href={"/searchPage"}>
-        F
         <span className="text-xl font-bold">
           <FaArrowLeft /> BACK TO
         </span>
       </Link>
-
-      {/* i want to use this button in other jsx  */}
-      <h1>{provinsiButtons}</h1>
-      {/* i want to use this button in other jsx  */}
-      <h1>Provinsi : {selectedProvinsi}</h1>
+      <h1>Provinsi : {provinsiname}</h1>
 
       <SearchInput />
       <div className="my-4">
-        {/* Section for displaying kabupaten buttons */}
         <div>
           <h1 className="text-center">PILIH KABUPATENMU</h1>
           <div className="flex flex-row justify-center space-x-2">
@@ -91,7 +85,6 @@ const FilterComponent = () => {
           </div>
         </div>
 
-        {/* Section for displaying kecamatan buttons */}
         {selectedKabupaten && (
           <div>
             <h1 className="text-center">PILIH KECAMATANMU</h1>
@@ -101,7 +94,6 @@ const FilterComponent = () => {
           </div>
         )}
 
-        {/* Section for displaying kelurahan buttons */}
         {selectedKecamatan && (
           <div>
             <h1 className="text-center">PILIH KELURAHANMU</h1>

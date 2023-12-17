@@ -22,21 +22,38 @@ const MapBackground = () => {
 
       <div>
         <h1>Select a Province</h1>
-        <Link href={{
-          pathname:"/searchPage/filter",
-          query: {
-            provinsi:"Bali"
-          }
-        }
+        <Link
+          href={{
+            pathname: "/searchPage/filter",
+            query: {
+              provinsi: "Bali",
+            },
+          }}
+        >
+          <h1>PILIH BALI</h1>
+        </Link>
 
-        }><h1>PILIHBALI</h1></Link>
-        <button onClick={() => handleSelectProvinsi("Bali")}>Bali</button>
-        <button onClick={() => handleSelectProvinsi("Jawa Barat")}>
-          Jawa Barat
-        </button>
-        <button onClick={() => handleSelectProvinsi("Jawa Timur")}>
-          Jawa Timur
-        </button>
+        <Link
+          href={{
+            pathname: "/searchPage/filter",
+            query: {
+              provinsi: "Jawa Timur",
+            },
+          }}
+        >
+          <h1>PILIH JAWA TIMUR</h1>
+        </Link>
+
+        <Link
+          href={{
+            pathname: "/searchPage/filter",
+            query: {
+              provinsi: "Jawa Barat",
+            },
+          }}
+        >
+          <h1>PILIh JAWA BARAT</h1>
+        </Link>
       </div>
     </div>
   );
