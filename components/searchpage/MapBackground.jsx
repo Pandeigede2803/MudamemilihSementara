@@ -8,18 +8,6 @@ import { useRouter } from "next/router";
 import useDapilStore from "@/components/ZustandStore/useDapilStore";
 
 const MapBackground = () => {
-  const { setSelectedProvinsi, fetchDapils } = useDapilStore();
-  const router = useRouter();
-
-  useEffect(() => {
-    fetchDapils(); // Fetch dapils on page load
-  }, [fetchDapils]);
-
-  const handleSelectProvinsi = (provinsi) => {
-    setSelectedProvinsi(provinsi);
-    router.push("/searchPage/filter"); // Navigate to Page 2
-  };
-
   return (
     <div>
       <Image
@@ -34,6 +22,14 @@ const MapBackground = () => {
 
       <div>
         <h1>Select a Province</h1>
+        <Link href={{
+          pathname:"/searchPage/filter",
+          query: {
+            provinsi:"Bali"
+          }
+        }
+
+        }><h1>PILIHBALI</h1></Link>
         <button onClick={() => handleSelectProvinsi("Bali")}>Bali</button>
         <button onClick={() => handleSelectProvinsi("Jawa Barat")}>
           Jawa Barat
