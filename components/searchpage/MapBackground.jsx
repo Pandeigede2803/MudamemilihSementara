@@ -17,47 +17,36 @@ const MapBackground = () => {
           alt="image"
         />
 
-        <div className=" bg-slate-500 w-[200px] h-[60px] absolute bottom-[170px] left-[650px] flex">
-          {/* create the button to direct link to searchPage/filter */}
-
+        <div className=" w-[200px] h-[60px] absolute bottom-[20px] left-[110px] flex ">
           
+          
+          {/* create the button to direct link to searchPage/filter */}
           <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-7 h-7 border-primary border bg-white text-primary text-lg font-extrabold rounded-full p-1 " />
+            <button>
+              Jawa timur
+            <HiOutlineLocationMarker className="w-auto  text-secondary text-sm font-extrabold  p-0 " />
+            </button>
           </Link>
           <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-7 h-7 border-primary border bg-white text-primary text-lg font-extrabold rounded-full p-1 " />
+            <HiOutlineLocationMarker className="w-auto   text-secondary  text-sm font-extrabold rounded-full p-0 " />
           </Link>
           <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-7 h-7 border-primary border bg-white text-primary text-lg font-extrabold rounded-full p-1 " />
+            <HiOutlineLocationMarker className="w-auto   text-secondary text-sm font-extrabold rounded-full p-0 " />
           </Link>
           <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-7 h-7 border-primary border bg-white text-primary text-lg font-extrabold rounded-full p-1 " />
+            <HiOutlineLocationMarker className="w-auto   text-secondary text-sm font-extrabold rounded-full p-0 " />
           </Link>
           <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-7 h-7 border-primary border bg-white text-primary text-lg font-extrabold rounded-full p-1 " />
+            <HiOutlineLocationMarker className="w-auto   text-secondary text-sm font-extrabold rounded-full p-0 " />
+            Jawa timur
           </Link>
           <Link href={"searchPage/filter"}>
-            <HiOutlineLocationMarker className="w-7 h-7 border-primary border bg-white text-primary text-lg font-extrabold rounded-full p-1 " />
+            <HiOutlineLocationMarker className="w-auto  text-secondary text-sm font-extrabold  p-0 " />
+            Bali
           </Link>
 
     
          
-        </div>
-
-        <div className="w-[40px] h-[20px] absolute bottom-[150px] left-[490px] flex">
-          <HiOutlineLocationMarker />
-          <HiOutlineLocationMarker />
-          <HiOutlineLocationMarker />
-          <HiOutlineLocationMarker />
-        </div>
-        <div className="bg-red-800 absolute"></div>
-        <div className="bg-green-500 absolute"></div>
-
-        <div className=" flex flex-row">
-          <HiOutlineLocationMarker />
-          <HiOutlineLocationMarker />
-          <HiOutlineLocationMarker />
-          <HiOutlineLocationMarker />
         </div>
       </div>
     </div>
