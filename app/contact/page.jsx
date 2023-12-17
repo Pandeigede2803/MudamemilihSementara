@@ -3,7 +3,7 @@ import ContactUs from '../../components/contactpage/ContactUs'
 
 const contact = () => {
   return (
-    <div>
+    <div className='my-32'>
         <ContactUs/>
       
     </div>
