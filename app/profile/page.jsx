@@ -7,18 +7,13 @@ import SiapaSaya from '../../components/profilepage/SiapaSaya'
 import CandidateRecommended from '../../components/profilepage/CandidateRecommended'
 import Event from '../../components/profilepage/Event'
 import LikeButton from '../../components/profilepage/LikeButton'
+import Detail from '../../components/profilepage/Detail'
+import Navigation from '../../components/profilepage/Navigation'
 
 function profile() {
   return (
-    <div className='bg-[#F0F0F0]'>
-        <Hero/>
-        <SiapaSaya/>
-        <VisiMisi/>
-        <EventList/>
-        <Event/>
-        <LikeButton/>
-        <SocialMedia/>
-        <CandidateRecommended/>
+    <div className='mb-10'>
+      <VisiMisi/> 
     </div>
   )
 }

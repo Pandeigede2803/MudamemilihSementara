@@ -3,7 +3,7 @@ import React from "react";
 
 function CandidateRecommended() {
   return (
-    <div className="my-14">
+    <div className="my-14 hidden lg:block">
       <h1 className="text-2xl font-bold text-center mb-10">Recommended Candidate</h1>
       <div className="lg:flex items-center justify-center ">
         <div className="mx-auto px-5">

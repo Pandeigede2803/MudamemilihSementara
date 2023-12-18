@@ -1,10 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function EventStyle(props) {
     const {image, title, description, alt, name, date} = props
   return (
     <>
+    <Link href={"/profile/event"}>
+    
       <div className="lg:w-[780px] lg:flex bg-slate-500 m-auto mt-10">
         <div
           className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
@@ -40,6 +43,7 @@ function EventStyle(props) {
           </div>
         </div>
       </div>
+    </Link>
     </>
   );
 }
