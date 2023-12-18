@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const CarouselData = [
     {
       id: 1,
@@ -124,4 +125,5 @@ const CarouselData = [
   ];
   
   export default CarouselData;
+
   

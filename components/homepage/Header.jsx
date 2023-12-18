@@ -1,5 +1,6 @@
 "use client";
 
+
 import React from "react";
 import SearchInput from "../homepage/SearchInput";
 import CountdownComponent from "./CountdownComponent";
@@ -8,6 +9,7 @@ import HeaderImage from "./HeaderImage";
 const Header = () => {
   return (
     <>
+
       <section className="bg-white ">
         <div className="grid max-w-screen-xl px-4 py-8 justify-center mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 ">
           {/* copywriting */}

@@ -1,5 +1,7 @@
+
 "use client"
 import React, { useEffect, useState } from "react";
+
 
 
 const Completionist = () => (
@@ -9,7 +11,6 @@ const Completionist = () => (
 const CountdownComponent = (props) => {
   // Set the target countdown date
   const targetDate = new Date("2024-02-14");
-
   // State to store countdown values
   const [countdownValues, setCountdownValues] = useState({
     days: 0,

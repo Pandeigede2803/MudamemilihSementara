@@ -1,6 +1,5 @@
-
-
 const ImageCarousel = ({ src, name, dapil, partai, logoPartai }) => {
+
 
 
   return (

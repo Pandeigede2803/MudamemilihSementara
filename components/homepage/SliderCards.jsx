@@ -1,4 +1,5 @@
 "use client"
+
 // Import necessary libraries
 import React, { Component } from "react";
 import Slider from "react-slick";

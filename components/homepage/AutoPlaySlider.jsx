@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import ImageCarousel from "./ImageCarousel"; // Import your ImageCarousel component
 import carouselData from "./CarouselData"; // Import your data array
 
+
 export default class AutoPlay extends Component {
   render() {
     const settings = {
@@ -36,6 +37,7 @@ export default class AutoPlay extends Component {
     };
 
     return (
+
       <>
         <div className=" my-4">
         <h2 className=" flex text-center flex-col font-sans text-[36px] ">Tentukan Kandidat Pilihanmu</h2>
