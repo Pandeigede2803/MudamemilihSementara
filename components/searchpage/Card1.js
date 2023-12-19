@@ -3,12 +3,12 @@ import Link from "next/link";
 import React from "react";
 
 
-function Card(props) {
+function Card1(props) {
 
-  const {image, link, urut, detail, name, style,partai} = props
+  const {image, link, urut, detail, name, style, style2} = props
 
   return (
-        <div className={`rounded overflow-hidden shadow-lg ${style}`}>
+        <div className={`${style} ${style2}`}>
           <div className="relative">
             <Link href="/profile">
               <Image
@@ -22,7 +22,7 @@ function Card(props) {
             </Link>
             <Link href={link}>
               <div className="absolute bottom-0 left-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
-                {partai}
+                Photos
               </div>
             </Link>
 
@@ -52,4 +52,4 @@ function Card(props) {
   );
 }
 
-export default Card
+export default Card1

@@ -5,7 +5,7 @@ import CountdownComponent from "./CountdownComponent";
 
 const HeaderImage = () => {
   return (
-    <div className=' '>
+    <div>
         <div className="relative flex justify-center ">
             <img
               src="https://ik.imagekit.io/m1akscp5q/Group%201328.png?updatedAt=1702042098665"

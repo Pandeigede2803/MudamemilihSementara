@@ -15,7 +15,6 @@ const searchPage = () => {
         <div className="w-[70%] mx-auto">
         <SearchInput/>
         </div>
-
     </div>
   );
 };

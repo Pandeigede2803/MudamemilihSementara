@@ -9,7 +9,6 @@ import SlidersCards from "../components/homepage/SliderCards";
 
 
 
-
 export default function Home() {
   return (
     <div className='mt-20 p-10'>
@@ -23,6 +22,5 @@ export default function Home() {
       <SlidersCards/>
 
     </div>
-
   )
 }

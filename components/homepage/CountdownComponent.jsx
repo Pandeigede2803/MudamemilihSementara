@@ -86,7 +86,6 @@ const CountdownComponent = (props) => {
       </div>
     </div>
   );
-
 };
 
 export default CountdownComponent;

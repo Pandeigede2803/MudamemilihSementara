@@ -64,4 +64,3 @@ function CandidateRecommended() {
 }
 
 export default CandidateRecommended;
-

@@ -37,6 +37,7 @@ export default class AutoPlay extends Component {
     };
 
     return (
+
       <>
         <div className=" my-4">
         <h2 className=" flex text-center flex-col font-sans text-[36px] ">Tentukan Kandidat Pilihanmu</h2>

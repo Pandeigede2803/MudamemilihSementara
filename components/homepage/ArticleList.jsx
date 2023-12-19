@@ -14,7 +14,7 @@ const truncateText = (text, maxLength) => {
 
 const ArticleSection = () => {
   return (
-    <section className="py-16   font-sans">
+    <section className="py-16 mx-2 font-sans">
       <div className="container mx-auto">
         <h2 className="text-3xl text-sans font-semibold mb-8 mx-auto text-center">
           Kenali Pilihanmu dengan artikel yang tersedia
