@@ -1,11 +1,22 @@
 "use client"
-import React, { Component } from "react";
-import Slider from "react-slick";
-import ImageCarousel from "./ImageCarousel"; // Import your ImageCarousel component
-import carouselData from "./CarouselData"; // Import your data array
-
+import React, { Component } from 'react';
+import Slider from 'react-slick';
+import ImageCarousel from './ImageCarousel'; // Ensure this component is properly defined in your project
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default class AutoPlay extends Component {
+  state = {
+    carouselData: [],
+  };
+
+  componentDidMount() {
+    fetch('http://localhost:3001/get-caleg')
+      .then(response => response.json())
+      .then(data => this.setState({ carouselData: data }))
+      .catch(error => console.error('Error:', error));
+  }
+
   render() {
     const settings = {
       dots: false,
@@ -18,14 +29,14 @@ export default class AutoPlay extends Component {
       cssEase: "linear",
       responsive: [
         {
-          breakpoint: 768, // Adjust breakpoint as needed
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
           },
         },
         {
-          breakpoint: 992, // Adjust breakpoint as needed
+          breakpoint: 992,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -33,19 +44,19 @@ export default class AutoPlay extends Component {
         },
         // Add more breakpoints if needed
       ],
-
     };
 
     return (
-
-      <>
-        <div className=" my-4">
-        <h2 className=" flex text-center flex-col font-sans text-[36px] ">Tentukan Kandidat Pilihanmu</h2>
-        <p className="text-center text-abu mx-2 font-sans text-[16px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui.</p></div>
+      <div className="auto-play-carousel">
+        <div className="header my-4">
+          <h2 className="title text-center font-sans text-[36px]">Tentukan Kandidat Pilihanmu</h2>
+          <p className="description text-center text-abu mx-2 font-sans text-[16px]">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui.
+          </p>
+        </div>
         <Slider {...settings}>
-          {carouselData.map((item) => (
+          {this.state.carouselData.map((item) => (
             <div key={item.id}>
-              {/* Pass the data as props to the ImageCarousel component */}
               <ImageCarousel
                 src={item.src}
                 alt={item.alt}
@@ -60,7 +71,7 @@ export default class AutoPlay extends Component {
             </div>
           ))}
         </Slider>
-      </>
+      </div>
     );
   }
 }
