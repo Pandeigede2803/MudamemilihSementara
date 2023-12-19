@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 const SearchInput = () => {
   return (
-    <div className="">
+    <div className="lg:mt-[100px]">
       <h4 className=" text-secondary font-sans">Cari Daerah Pilihanmu!</h4>
       <div className=" bg-white py-[20px] px-[20px] rounded-lg shadow-2xl ">
         <form>

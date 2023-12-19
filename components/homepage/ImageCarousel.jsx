@@ -13,7 +13,7 @@ const ImageCarousel = ({ src, name, dapil, partai, logoPartai }) => {
           {name}
         </h4>
         <span className="flex flex-row text-center align-middle">
-          <img src={logoPartai} alt="Party Logo" />
+          <img src={logoPartai} alt="Party Logo" className="w-[24px] h-[24] rounded-sm"/>
           <h5 className="text-white text-[10px] font-sans text-center  mx-2 ">
             {partai}
           </h5>

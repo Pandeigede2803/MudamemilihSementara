@@ -2,38 +2,7 @@
 import React from "react";
 
 const articles = [
-  {
-    id: 1,
-    title: "Getting Started with Next.js",
-    content:
-      "Learn the basics of Next.js and build your first app,Learn the basics of Next.js and build your first app,Learn the basics of Next.js and build your first appLearn the basics of Next.js and build your first app.",
-    imageUrl:
-      "https://ik.imagekit.io/m1akscp5q/prabowo%20artikel.png?updatedAt=1702216086363",
-  },
-  {
-    id: 2,
-    title: "Tailwind CSS for Styling",
-    content:
-      "Explore the power of Tailwind CSS for styling your Next.js projects Learn the basics of Next.js and build your first app Learn the basics of Next.js and build your first app.",
-    imageUrl:
-      "https://ik.imagekit.io/m1akscp5q/prabowo%20artikel.png?updatedAt=1702216086363",
-  },
-  {
-    id: 3,
-    title: "Fetching Data in Next.js",
-    content:
-      "Understand different ways to fetch data in a Next.js application Learn the basics of Next.js and build your first app Learn the basics of Next.js and build your first app.",
-    imageUrl:
-      "https://ik.imagekit.io/m1akscp5q/prabowo%20artikel.png?updatedAt=1702216086363",
-  },
-  {
-    id: 4,
-    title: "Deploying Next.js Apps",
-    content:
-      "Learn how to deploy your Next.js apps to various hosting platforms.Learn the basics of Next.js and build your first app Learn the basics of Next.js and build your first app",
-    imageUrl:
-      "https://ik.imagekit.io/m1akscp5q/prabowo%20artikel.png?updatedAt=1702216086363",
-  },
+
 ];
 
 const truncateText = (text, maxLength) => {
