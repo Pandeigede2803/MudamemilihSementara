@@ -1,9 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import bgJabar from '@/public/bg-jabar-pangalengan.jpg';
-import prabowo from '../../public/prabowo-nobg.png';
 import profileFoto from '../../public/profileFoto.jpg'
-import heroBg from '../../public/heroBg.jpg'
 import heroBg2 from '../../public/heroBg2.png'
 
 function Hero() {

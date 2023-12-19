@@ -11,7 +11,7 @@ export default class SliderCards extends Component {
   render() {
     // Settings for the Slider component
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       slidesToShow: 5,
       slidesToScroll: 2,

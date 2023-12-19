@@ -6,11 +6,7 @@ import { PiOfficeChairLight } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import { IoLogoFacebook } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa6";
-import bgJabar from "@/public/bg-jabar-pangalengan.jpg";
-import prabowo from "../../public/prabowo-nobg.png";
-import profileFoto from "../../public/profileFoto.jpg";
 import profileFoto1 from "../../public/profileFoto1.png";
-import heroBg from "../../public/heroBg.jpg";
 import heroBg2 from "../../public/heroBg2.png";
 import PartaiNasdem from "@/public/PartaiNasDem.png";
 
