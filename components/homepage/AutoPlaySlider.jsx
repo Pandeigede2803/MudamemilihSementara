@@ -1,4 +1,5 @@
 "use client"
+
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import ImageCarousel from './ImageCarousel'; // Ensure this component is properly defined in your project
