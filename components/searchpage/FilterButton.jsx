@@ -12,4 +12,5 @@ const FilterButton = ({ name, onClick }) => {
   );
 };
 
+
 export default FilterButton;

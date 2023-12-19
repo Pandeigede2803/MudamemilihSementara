@@ -14,6 +14,7 @@ const filter = ({searchParams}) => {
     <div className="px-8 h-[100vh]">
       
       <FilterComponent provinsiname={searchParams.provinsi}/>
+
     </div>
   );
 };

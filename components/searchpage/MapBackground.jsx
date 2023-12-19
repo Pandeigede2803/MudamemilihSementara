@@ -54,6 +54,7 @@ const MapBackground = () => {
 
       <div className="w-[3%] h-[3%] left-[41.2%] bottom-[28%] md:bottom-[25%] md:left-[42.3%] absolute " >
       <div className="relative flex justify-center">
+
           <Link
             href={{
               pathname: "/searchPage/filter",
