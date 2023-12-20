@@ -1,5 +1,6 @@
 // components/ArticleSection.js
 import React from "react";
+import Image from 'next/image';
 
 const articles = [
 
@@ -32,7 +33,7 @@ const ArticleSection = () => {
               className="bg-white p-6 rounded-lg w-151 h-54 hover:bg-accent2 shadow-md flex"
             >
               <div className="flex-none my-auto w-fit mr-4 pr-0 bg-gray-200">
-                <img src={article.imageUrl} alt="Article" className="w-40" />
+              <Image src={article.imageUrl} alt="Article" width={202} height={179} className="w-40" />
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">{article.title}</h3>

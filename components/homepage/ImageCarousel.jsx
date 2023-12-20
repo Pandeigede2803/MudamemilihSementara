@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ImageCarousel = ({ src, name, dapil, partai, logoPartai }) => {
 
 
@@ -7,13 +9,13 @@ const ImageCarousel = ({ src, name, dapil, partai, logoPartai }) => {
       <h4 className="absolute top-0 right-0 bg-primary text-xs text-white px-3 py-1 rounded-bl-lg">
         {dapil}
       </h4>
-      <img className="w-full object-cover" src={src} alt="Person's Image" />
+      <Image className="w-full object-cover" src={src} alt="Person's Image" width={280} height={380}/>
       <div className="absolute bottom-0 left-0 right-0 px-6 pb-2 ">
         <h4 className="  font-thin font-sans text-base text-white mb-2">
           {name}
         </h4>
         <span className="flex flex-row text-center align-middle">
-          <img src={logoPartai} alt="Party Logo" className="w-[24px] h-[24] rounded-sm"/>
+          <Image height={24} width={24} src={logoPartai} alt="Party Logo" className="w-[24px] h-[24] rounded-sm"/>
           <h5 className="text-white text-[10px] font-sans text-center  mx-2 ">
             {partai}
           </h5>

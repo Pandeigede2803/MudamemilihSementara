@@ -6,6 +6,7 @@ import SearchInput from "../homepage/SearchInput";
 import CountdownComponent from "./CountdownComponent";
 import HeaderImage from "./HeaderImage";
 
+
 const Header = () => {
   return (
     <>
