@@ -1,24 +1,23 @@
+"use client";
 
 // SearchInput.js
-import Link from "next/link";
 
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
+// change the store
+import useDapilStoreBaru from "@/components/ZustandStore/useDapilStoreBaru";
 
 // use this new store
 import useDataStore from "@/components/ZustandStore/useDatastore"
 
 import useAuthStore from "@/components/ZustandStore/authStore";
-import { useRouter } from 'next/navigation';
 
 const SearchInput = () => {
 
   const { data, fetchData, setSelectedProvinsi } = useDataStore();
-  const router = useRouter();
   const { token } = useAuthStore();
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  
 
   useEffect(() => {
     if (token) {
@@ -43,8 +42,6 @@ const SearchInput = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSelectedProvinsi(inputValue);
-    console.log("Selected Provinsiiiiiiiiii:", inputValue);
-    router.push(`/searchPage?provinsi=${encodeURIComponent(inputValue)}`);
     setInputValue("");
     setSuggestions([]);
   };
@@ -88,16 +85,13 @@ const SearchInput = () => {
               value={inputValue}
               onChange={handleInputChange}
             />
-
-           
             <button
               type="submit"
               className="md:w-[240px] flex flex-row text-center align-middle justify-center text-white absolute end-0.5 lg:bottom-1.5 bottom-2 bg-primary hover:bg-accent hover:text-primary hover:border-neutral-500 hover:border focus:ring-4 focus:outline-none focus:ring-black font-medium rounded-lg text-sm md:p-4 p-4 -mb-2 "
-             >
+            >
               <FaSearch className="hidden md:flex text-center my-auto text-white font-sans mr-4 hover:text-primary" />
               <h4 className="md:text-lg text-md font-sans">Cari Kandidat</h4>
             </button>
-           
             {suggestions.length > 0 && (
               <ul className="absolute bg-white border border-gray-300 w-full mt-1 rounded-lg z-10">
                 {suggestions.map((suggestion, index) => (

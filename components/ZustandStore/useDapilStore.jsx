@@ -19,9 +19,13 @@ const useDapilStore = create((set, get) => ({
       console.error("Fetching error:", error);
     }
   },
+
+
   getProvinces: () => {
     return get().dapils.map((provinsiData) => provinsiData.provinsi);
   },
+
+
   setSelectedProvinsi: (provinsi) => {
     set({
       selectedProvinsi: provinsi,
@@ -29,12 +33,16 @@ const useDapilStore = create((set, get) => ({
       selectedKecamatan: null,
     });
   },
+
+
   setSelectedKabupaten: (nama) => {
     set({ selectedKabupaten: nama, selectedKecamatan: null });
   },
+
   setSelectedKecamatan: (nama) => {
     set({ selectedKecamatan: nama });
   },
+
   getKabupatenList: () => {
     const selectedProvinsi = get().selectedProvinsi;
     const dapils = get().dapils;
@@ -43,6 +51,7 @@ const useDapilStore = create((set, get) => ({
       ?.kabupaten || [];
     return kabupatenList;
   },
+  
   initializeData: async () => {
     await get().fetchDapils();
     // You can add additional initialization logic here

@@ -8,7 +8,7 @@ const SellingPoint = () => {
         width={1520}
         height={1520}
         src="https://ik.imagekit.io/m1akscp5q/Group%201351.png?updatedAt=1702271106212"
-        className=""
+     
       ></Image>
       <div className="">
         {/* 1 */}

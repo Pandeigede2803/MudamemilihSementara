@@ -6,17 +6,17 @@ const ImageCarousel = ({ src, name, dapil, partai, logoPartai }) => {
 
   return (
     <div className="m-auto max-w-sm overflow-hidden rounded-3xl mx-4 bg-slate-400 relative group">
-      <h4 className="absolute top-0 right-0 bg-primary text-xs text-white px-3 py-1 rounded-bl-lg">
+      <h4 className="absolute top-0 right-0 bg-primary lg:text-xs text-[8px]  text-white px-3 py-1 rounded-bl-lg">
         {dapil}
       </h4>
       <Image className="w-full object-cover" src={src} alt="Person's Image" width={280} height={380}/>
-      <div className="absolute bottom-0 left-0 right-0 px-6 pb-2 ">
-        <h4 className="  font-thin font-sans text-base text-white mb-2">
+      <div className="absolute bottom-0 left-0 right-0 lg:px-6 pb-2 px-2 ">
+        <h4 className="  font-thin font-sans text-[10px] lg:text-[13px] text-white mb-2">
           {name}
         </h4>
-        <span className="flex flex-row text-center align-middle">
+        <span className="  justify-left items-center flex flex-row  align-middle">
           <Image height={24} width={24} src={logoPartai} alt="Party Logo" className="w-[24px] h-[24] rounded-sm"/>
-          <h5 className="text-white text-[10px] font-sans text-center  mx-2 ">
+          <h5 className="text-white lg:text-[10px] text-[8px]  font-sans text-center  mx-2 ">
             {partai}
           </h5>
         </span>

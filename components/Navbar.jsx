@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -13,17 +14,19 @@ const Navbar = () => {
     <nav className="bg-white fixed w-full z-20 top-0 start-0 dark:border-gray-600 font-sans">
 
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
+          <Image
             src="https://ik.imagekit.io/m1akscp5q/logo-magenta%201.png?updatedAt=1702042098615"
-            className="lg:h-auto h-10 "
+            className="lg:h-auto lg:w-[184px] h-auto w-[100px]"
             alt="MudahMemilih Logo"
+            width={184}
+            height={73}
           />
           
-        </a>
+        </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Link href={"https://wa.me/6282339929257?text=Saya%20tertarik%20dengan%20Mudah%20Memiulih"} target="_blank">
           <button
@@ -77,7 +80,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/About"
                 className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 "
               >
                 About
@@ -85,7 +88,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/Testing"
                 className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 "
               >
                 Services
