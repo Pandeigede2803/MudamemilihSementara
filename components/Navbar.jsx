@@ -88,10 +88,10 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="/Testing"
+                href="/searchPage"
                 className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 "
               >
-                Services
+                Search
               </a>
             </li>
             <li>

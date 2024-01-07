@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        'la-belle': ['"La Belle Aurore"', 'cursive'],
       },
       colors: {
         primary: '#D2355F',

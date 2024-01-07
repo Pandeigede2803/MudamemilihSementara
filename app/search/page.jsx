@@ -1,47 +1,45 @@
 "use client"
 
-import React, { useState } from "react";
-import Card from "../../components/searchpage/Card";
-import Filter from "../../components/searchpage/filter";
-import CardData from "../../components/searchpage/CardData";
+import React, { useState, useEffect } from "react";
+// import Card from "../../components/searchpage/Card"; // Uncomment if used
+// import Filter from "../../components/searchpage/filter"; // Uncomment if used
+// import CardData from "../../components/searchpage/CardData"; // Uncomment if used
+import { useRouter } from "next/router"; // Corrected import for Next.js router
+import useDataStore from "@/components/ZustandStore/useDatastore";
+import API_ENDPOINTS from "@/config"; 
 
 function Page() {
-  const [filteredData, setFilteredData] = useState(CardData);
 
-  const handleFilterChange = (filterValues) => {
-    // Implement your filtering logic based on the provided filterValues
-    // For simplicity, this example assumes a case-insensitive substring match
-    const newFilteredData = CardData.filter((data) =>
-      Object.entries(filterValues).every(
-        ([key, value]) =>
-          !value || String(data[key]).toLowerCase().includes(value.toLowerCase())
-      )
-    );
 
-    setFilteredData(newFilteredData);
-  };
+  const { data, searchParam, fetchData } = useDataStore();
+
+  useEffect(() => {
+    if (searchParam) {
+      const apiUrl = `${API_ENDPOINTS.searchDapils}?search=${searchParam}`;
+      console.log("API URL:", apiUrl); // Log the API URL
+      fetchData(); // Optional: Call fetchData if you want to fetch data whenever searchParam changes
+    }
+  }, [searchParam, fetchData]);
+
+
 
   return (
-    <div className="">
-      <Filter onFilterChange={handleFilterChange} />
+    <div className="mt-32">
+      {/* <Filter onFilterChange={handleFilterChange} /> */}
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-10">
-          {filteredData.map((data) => (
-            <Card
-              key={data.urut}
-              image={data.image}
-              link={data.link}
-              urut={data.urut}
-              name={data.name}
-              detail={data.detail}
-              style={data.style}
-              partai={data.partai}
-            />
+        <h1>Hasil Pencarian untuk Kecamatan</h1>
+        <ul>
+          {Array.isArray(data) && data.map((item, index) => (
+            <li key={index}>
+              {JSON.stringify(item, null, 2)}
+            </li>
           ))}
-        </div>
+        </ul>
+
       </div>
     </div>
   );
 }
 
 export default Page;
+

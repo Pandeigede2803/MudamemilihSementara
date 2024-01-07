@@ -6,15 +6,17 @@ import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 // change the store
 import useDapilStoreBaru from "@/components/ZustandStore/useDapilStoreBaru";
-
 // use this new store
 import useDataStore from "@/components/ZustandStore/useDatastore"
 
 import useAuthStore from "@/components/ZustandStore/authStore";
+// Import provinsiData
+import provinsiData from '@/components/searchpage/ProvinsiJson'; // Adjust the path as necessary
+
 
 const SearchInput = () => {
 
-  const { data, fetchData, setSelectedProvinsi } = useDataStore();
+  const { data, fetchData, setSelectedProvinsi,setSearchParam,selectedProvinsi } = useDataStore();
   const { token } = useAuthStore();
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
@@ -28,22 +30,32 @@ const SearchInput = () => {
   const handleInputChange = (event) => {
     const value = event.target.value;
     setInputValue(value);
-
-    const allProvinsi = data
-      ?.filter((item) =>
-        item.attributes.provinsi.toLowerCase().includes(value.toLowerCase())
+  
+    // Filter provinsiData based on input value
+    const allProvinsi = provinsiData.provinsi
+      .filter(provinsi =>
+        provinsi.nama.toLowerCase().includes(value.toLowerCase()) ||
+        (provinsi.namaLokal && provinsi.namaLokal.toLowerCase().includes(value.toLowerCase()))
       )
-      .map((item) => item.attributes.provinsi);
-
-    const uniqueProvinsi = Array.from(new Set(allProvinsi));
-    setSuggestions(uniqueProvinsi || []);
+      .map(provinsi => provinsi.nama);
+  
+    setSuggestions(allProvinsi || []);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Update the searchParam state in the store
+    setSearchParam(inputValue);
+
     setSelectedProvinsi(inputValue);
+
+    // Reset the input field and suggestions
     setInputValue("");
     setSuggestions([]);
+// Clear selectedKabKota when a new provinsi is clicked
+    fetchData();
+    
   };
 
   return (
