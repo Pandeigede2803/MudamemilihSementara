@@ -7,9 +7,9 @@ import API_ENDPOINTS from "@/config";
 const useDataStore = create((set) => ({
   // deklarasikan state
   data: null,
-  selectedProvinsi: null,
+  selectedProvinsi: "Bali",
   selectedKabKota: null,
-  searchParam: null,
+  searchParam: "Bali",
   selectedNama: [],
   kecamatan: null,
   namaKecamatan: "",

@@ -60,7 +60,7 @@ export default function page() {
       </div>
       {/* section 2 visi misi */}
       <div className=" bg-[#FCFCFC] grid grid-cols-1 lg:mx-40 py-4 lg:space-x-6">
-        <div className=" font-sans mx-4 text-justify flex flex-col lg:flex-row lg:space-x-10 mb-4  ">
+        <div className=" font-sans mx-4 text-justify flex flex-col justify-center lg:flex-row lg:space-x-10 mb-4  ">
           <div className="mb-4 flex flex-col lg:justify-center lg:h-full  ">
             <h1 className=" font-bold text-2xl text-center">Misi</h1>
             <ol className="list-decimal pl-5 leading-9">
@@ -78,7 +78,7 @@ export default function page() {
               </li>
             </ol>
           </div>
-
+          <div className="lg:my-auto lg:w-full md:mx-auto">
           <Image
             src={
               "https://ik.imagekit.io/m1akscp5q/Image%20Misi%20(1).png?updatedAt=1703787569870"
@@ -86,13 +86,13 @@ export default function page() {
             width={481}
             height={355}
             className=" rounded-xl  "
-          ></Image>
+          ></Image></div>
         </div>
       </div>
 
       {/* section keunggulan */}
 
-      <div>
+      <div className=" lg:mx-40">
         <div className="mx-2 flex flex-col justify-center mx-2 font-sans">
           <h1 className="font-bold text-2xl text-center">
             Apa Keunggulan Kami?
@@ -103,8 +103,11 @@ export default function page() {
             mitra dan pelanggan kami.
           </p>
         </div>
-        <div className="mx-10 my-2 space-y-5 font-sans items-center  grid grid-cols-1 lg:grid-cols-3">
-          <div className="lg:flex-row flex flex-col items-center space-y-2">
+
+
+        <div className="flex flex-col lg:flex-row justify-center lg:space-x-10 my-10 my-4">
+          {/* 1 */}
+          <div className="flex lg:flex-row justify-center flex-col items-center space-x-2 ">
             <svg
               width="48"
               height="49"
@@ -117,10 +120,15 @@ export default function page() {
                 fill="#D2355F"
               />
             </svg>
-            <h4 className=" text-center">Kecepatan Penyebaran <br/>Informasi</h4>
+            <h4 className="text-center">Kecepatan Penyebaran <br></br> Informasi</h4>
           </div>
 
-          <div className="flex-col lg:flex-row items-center flex space-y-2">
+  
+          {/* 2 */}
+
+          
+
+          <div className="flex lg:flex-row justify-center flex-col items-center space-x-2 my-4 ">
             <svg
               width="48"
               height="49"
@@ -139,9 +147,10 @@ export default function page() {
                 fill="#D2355F"
               />
             </svg>
-            <h4>Biaya Efektif</h4>
+            <h4 className=" items-center">Biaya Efektif</h4>
           </div>
-          <div className="lg:flex-row flex items-center flex-col space-y-2">
+
+          <div className="flex lg:flex-row justify-center flex-col items-center space-x-2 my-4 ">
             <svg
               width="48"
               height="49"
@@ -166,7 +175,7 @@ export default function page() {
                 </clipPath>
               </defs>
             </svg>
-            <h4> Isi isu Lokal</h4>
+            <h4 className="text-center"> Isi-isu Lokal</h4>
           </div>
         </div>
       </div>

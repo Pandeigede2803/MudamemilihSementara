@@ -66,7 +66,7 @@ const handleKabKotaClick = (kabKota) => {
     setSearchParam(kabKota);
     setSelectedKabKota(null);
     setKecamatan(null);
-    router.push('/search'); // Redirect to /search page
+    router.push('/searchcalegs'); // Redirect to /search page
   }
 };
 
@@ -91,20 +91,6 @@ const handleKabKotaClick = (kabKota) => {
     router.push("/search");
     console.log("Navigated to /search route"); // Log the navigation action
   };
-  // const nameToMatch = namaKecamatan.split("-")[1];
-  // console.log(`nama to match adalah : ${nameToMatch}`);
-  // const kecamatanData = data.find((item) => item.nama === nameToMatch);
-
-  // if (kecamatanData) {
-  //   setSelectedKecamatanData(kecamatanData);
-  //   setSearchParam(kecamatanData.nama); // Set search parameter with kecamatan name
-  //   console.log(`saya mengconsole : ${kecamatanData.nama}`);
-  //   fetchData(); // Trigger data fetching with the new search parameter
-  //   router.push(`/search?searchParam=${kecamatanData.nama}`); // Pass searchParam to /search route
-  // } else {
-  //   console.log("No matching kecamatanData found for:", nameToMatch);
-  //   router.push("/search");
-  // }
 
   useEffect(() => {
     const fetchDataAsync = async () => {
@@ -119,9 +105,10 @@ const handleKabKotaClick = (kabKota) => {
 
     fetchDataAsync();
     setSelectedKabKota(null);
+
     
   }, [fetchData]);
-
+  
   return (
     <div className="mb-10 mt-10 font-sans mx-6">
       <Link href="/">
@@ -160,16 +147,6 @@ const handleKabKotaClick = (kabKota) => {
         </h1>
 
         <div className=" mx-auto flex justify-center grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-20">
-          {/* {provinsiList.map((provinsi) => (
-            <button
-              key={provinsi.nama}
-              className="bg-white border hover:bg-primary hover:text-white text-abu font-sans py-2 px-4 rounded-lg text-sm"
-              onClick={() => handleProvinsiClick(provinsi)}
-            >
-              {provinsi.nama}
-            </button>
-          ))} */}
-
           <button
             className="bg-white border hover:bg-primary hover:text-white text-abu font-sans py-2 px-4 rounded-lg text-sm"
             // onClick={() => handleProvinsiClick(provinsi)}
@@ -218,8 +195,6 @@ const handleKabKotaClick = (kabKota) => {
         )
       )}
 
-      {/* map the "nama" from data that related to the kab_kota */}
-      {/* Display "Nama Dapils" */}
       <h1 className="text-xl text-center font-sans mb-5">Nama Dapils</h1>
       <div className=" w-fit flex flex-col justify-center mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">

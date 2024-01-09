@@ -6,7 +6,7 @@ import MapBackground from "@/components/searchpage/MapBackground";
 import FetchComponent from "@/components/searchpage/FetchComponent";
 import SearchComponent from "@/components/searchpage/SearchComponent";
 import { useRouter } from "next/navigation";
-import InteractiveMap from "@/components/searchpage/InteractiveMap";
+
 
 const SearchPage = () => {
   const router = useRouter();
@@ -24,11 +24,11 @@ const SearchPage = () => {
 
   return (
     <div>
-      <div className="bg-primary h-full mt-28">
+      <div className="bg-primary w-auto">
         <MapBackground />
       </div>
        
-      <div className="mx-[10px] my-3">
+      <div className="mx-[10px] mb-3 mt-0">
         {/* You can pass provinsi as a prop to SearchComponent if needed */}
         <SearchComponent provinsi={provinsi} />
       </div>
