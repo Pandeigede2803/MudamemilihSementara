@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import Image from "next/image";
 
 const ImageCarousel = ({ src, name, dapil, partai, logoPartai }) => {
-  const [isHovered, setIsHovered] = useState(false);
+
+
 
   return (
     <div className="m-auto max-w-sm overflow-hidden rounded-3xl mx-4 bg-slate-400 relative group">
-      <h4 className="absolute top-0 right-0 bg-primary text-xs text-white px-3 py-1 rounded-bl-lg">
+      <h4 className="absolute top-0 right-0 bg-primary lg:text-xs text-[8px]  text-white px-3 py-1 rounded-bl-lg">
         {dapil}
       </h4>
-      <img className="w-full object-cover" src={src} alt="Person's Image" />
-      <div className="absolute bottom-0 left-0 right-0 px-6 pb-2 ">
-        <h4 className="  font-thin font-sans text-xs text-base text-white mb-2">
+      <Image className="w-full object-cover" src={src} alt="Person's Image" width={280} height={380}/>
+      <div className="absolute bottom-0 left-0 right-0 lg:px-6 pb-2 px-2 ">
+        <h4 className="  font-thin font-sans text-[10px] lg:text-[13px] text-white mb-2">
           {name}
         </h4>
-        <span className="flex flex-row text-center align-middle">
-          <img src={logoPartai} alt="Party Logo" />
-          <h5 className="text-white text-[10px] font-sans text-center  mx-2 ">
+        <span className="  justify-left items-center flex flex-row  align-middle">
+          <Image height={24} width={24} src={logoPartai} alt="Party Logo" className="w-[24px] h-[24] rounded-sm"/>
+          <h5 className="text-white lg:text-[10px] text-[8px]  font-sans text-center  mx-2 ">
             {partai}
           </h5>
         </span>
@@ -24,21 +25,21 @@ const ImageCarousel = ({ src, name, dapil, partai, logoPartai }) => {
         <svg
           stroke="currentColor"
           fill="currentColor"
-          stroke-width="0"
+          strokeWidth="0"
           viewBox="0 0 16 16"
           height="1em"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           ></path>
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           ></path>
         </svg>
         <div>Kepoin gue yuk</div>

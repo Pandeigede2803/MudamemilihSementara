@@ -2,13 +2,13 @@ import React from "react";
 
 function SocialMedia() {
   return (
-    <div class="flex flex-col my-20 bg-center bg-cover bg-no-repeat">
-      <div class="grid place-items-center mx-auto sm:my-auto rounded-3xl space-y-10 shadow-xl bg-white w-full lg:w-[780px] py-10">
-        <h1 class="lg:text-5xl font-semibold text-black">Social Media Buttons</h1>
-        <div class="flex flex-col lg:flex-row gap-2 items-center justify-center lg:space-x-3">
-          <button class="bg-blue-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+    <div className="flex flex-col my-20 bg-center bg-cover bg-no-repeat">
+      <div className="grid place-items-center mx-auto sm:my-auto rounded-3xl space-y-10 shadow-xl bg-white w-full lg:w-[780px] py-10">
+        <h1 className="lg:text-5xl font-semibold text-black">Social Media Buttons</h1>
+        <div className="flex flex-col lg:flex-row gap-2 items-center justify-center lg:space-x-3">
+          <button className="bg-blue-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
             <svg
-              class="w-5 h-5 fill-current"
+              className="w-5 h-5 fill-current"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -17,9 +17,9 @@ function SocialMedia() {
             </svg>
             <span>Facebook</span>
           </button>
-          <button class="bg-blue-300 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+          <button className="bg-blue-300 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
             <svg
-              class="w-5 h-5 fill-current"
+              className="w-5 h-5 fill-current"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -28,9 +28,9 @@ function SocialMedia() {
             </svg>
             <span>Twitter</span>
           </button>
-          <button class="bg-red-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+          <button className="bg-red-500 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
             <svg
-              class="w-5 h-5 fill-current"
+              className="w-5 h-5 fill-current"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -39,9 +39,9 @@ function SocialMedia() {
             </svg>
             <span>Reddit</span>
           </button>
-          <button class="bg-pink-600 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+          <button className="bg-pink-600 px-4 py-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
             <svg
-              class="w-5 h-5 fill-current"
+              className="w-5 h-5 fill-current"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"

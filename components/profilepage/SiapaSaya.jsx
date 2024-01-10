@@ -1,68 +1,67 @@
-import React from 'react'
+"use client";
+import React, { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 function SiapaSaya() {
+  const [showFirst, setShowFirst] = useState(false);
+  const [showSecond, setShowSecond] = useState(false);
+
+  const toggleShowFirst = () => {
+    setShowFirst(!showFirst);
+  };
+  const toggleShowSecond = () => {
+    setShowSecond(!showSecond);
+  };
+
   return (
-
-        <div class="flex flex-col justify-center items-center ">
-            <div class="relative flex flex-col items-center rounded-[20px] lg:w-[780px] max-w-[95%] mx-auto bg-white bg-clip-border shadow-xl p-3">
-                <div class="mt-2 mb-8 w-full">
-                    <h4 class="px-2 text-xl font-bold text-navy-700 text-black">
-                    General Information
-                    </h4>
-                    <p class="mt-2 px-2 text-base text-gray-600">
-                    As we live, our hearts turn colder. Cause pain is what we go through
-                    as we become older. We get insulted by others, lose trust for those
-                    others. We get back stabbed by friends. It becomes harder for us to
-                    give others a hand. We get our heart broken by people we love, even
-                    that we give them all...
-                    </p>
-                </div> 
-                <div class="grid grid-cols-2 gap-4 px-2 w-full">
-                    <div class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                    <p class="text-sm text-gray-600">Education</p>
-                    <p class="text-base font-medium text-navy-700 text-black">
-                        Stanford University
-                    </p>
-                    </div>
-
-                    <div class="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                    <p class="text-sm text-gray-600">Languages</p>
-                    <p class="text-base font-medium text-navy-700 text-black">
-                        English, Spanish, Italian
-                    </p>
-                    </div>
-
-                    <div class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                    <p class="text-sm text-gray-600">Department</p>
-                    <p class="text-base font-medium text-navy-700 text-black">
-                        Product Design
-                    </p>
-                    </div>
-
-                    <div class="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                    <p class="text-sm text-gray-600">Work History</p>
-                    <p class="text-base font-medium text-navy-700 text-black">
-                        English, Spanish, Italian
-                    </p>
-                    </div>
-
-                    <div class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                    <p class="text-sm text-gray-600">Organization</p>
-                    <p class="text-base font-medium text-navy-700 text-black">
-                        Simmmple Web LLC
-                    </p>
-                    </div>
-
-                    <div class="flex flex-col justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-                    <p class="text-sm text-gray-600">Birthday</p>
-                    <p class="text-base font-medium text-navy-700 text-black">
-                        20 July 1986
-                    </p>
-                    </div>
-                </div>
-            </div>  
+    <div className="flex flex-col gap-5">
+      <div>
+        <div className="w-full py-2 shadow-md flex justify-between">
+          <h3 className="text-[18px] font-bold">Latar Belakang</h3>
+          <button onClick={toggleShowFirst}>
+            <IoIosArrowDown size={20} />
+          </button>
         </div>
-  )
+        {showFirst && (
+          <ul className="mt-[24px] space-y-1 text-black list-disc list-inside">
+            <li>
+              <span>Nama Lengkap :</span> Murad Nasser Septian
+            </li>
+
+            <li>
+              <span>Umur :</span> 70 Tahun
+            </li>
+
+            <li>
+              <span>TTL :</span> Jakarta, 20 Desember 1980
+            </li>
+
+            <li>
+              <span>Pendidikan :</span> S1 Sistem Informasi UGM, S2 Information
+              System LSPR
+            </li>
+          </ul>
+        )}
+      </div>
+
+      <div>
+        <div className="w-full py-2 shadow-md flex justify-between">
+          <h3 className="text-[18px] font-bold">Prestasi</h3>
+          <button onClick={toggleShowSecond}>
+            <IoIosArrowDown size={20} />
+          </button>
+        </div>
+
+        {showSecond && (
+          <ul className="mt-[24px] space-y-1 text-black list-disc list-inside">
+            <li>Sekertaris 1 Bidang Ekonomi di KBRI Belanda (2014-2022)</li>
+            <li>Menteri Luar Negri (2018-2019)</li>
+            <li>Menteri Koordinator Kemaritiman (2019-2022)</li>
+          </ul>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export default SiapaSaya
+export default SiapaSaya;

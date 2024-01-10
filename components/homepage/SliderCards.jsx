@@ -1,3 +1,5 @@
+"use client"
+
 // Import necessary libraries
 import React, { Component } from "react";
 import Slider from "react-slick";
@@ -9,7 +11,7 @@ export default class SliderCards extends Component {
   render() {
     // Settings for the Slider component
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       slidesToShow: 5,
       slidesToScroll: 2,
@@ -46,6 +48,7 @@ export default class SliderCards extends Component {
 
     // Render the AutoPlaySlider component
     return (
+      <>
       <div className=" mb-12">
         <div className='my-4 font-sans flex flex-col justify-center text-center'>
         <h1 className=' text-primary text-3xl'>Cek Partai Pilihanmu Disini!</h1>
@@ -61,6 +64,7 @@ export default class SliderCards extends Component {
           ))}
         </Slider>
       </div>
+      </>
     );
   }
 }

@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        'la-belle': ['"La Belle Aurore"', 'cursive'],
       },
       colors: {
         primary: '#D2355F',
@@ -23,14 +24,14 @@ const config: Config = {
 
       },
       fontWeight: {
-        thin: 100,
-        light: 300,
-        normal: 400,
-        medium: 500,
-        semiBold: 600,
-        bold: 700,
-        extraBold: 800,
-        black: 900,
+        thin: '100',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semiBold: '600',
+        bold: '700',
+        extraBold: '800',
+        black: '900',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

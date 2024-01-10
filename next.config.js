@@ -1,7 +1,15 @@
-// next.config.js
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
     images: {
-      domains: ['ik.imagekit.io','mdbcdn.b-cdn.net'], // Add any other domains as needed
-    },
-  };
-  
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'ik.imagekit.io',
+            pathname: '**',
+          },
+        ],
+      },
+}
+
+module.exports = nextConfig
+
